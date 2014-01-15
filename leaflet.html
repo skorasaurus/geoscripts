@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+        <title>Title</title>
+        <meta charset="utf-8">
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.css" />
+  
+
+         <!-- THIS IS WHERE WE PUT ALL THE STYLE INFO FOR THE PAGE-->
+         <style type="text/css">
+                body {
+                        padding: 0;
+                        margin: 0;
+                }
+
+                html, body, #map {
+                        height: 100%; /* make the map take up the whole page */
+                }
+
+         </style>
+         
+        <body>
+                <!-- the 'map' div is where the map content is going -->
+                <div id="map"></div>
+              <!--    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script> if necessary -->
+                <script src="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.js?2"></script>
+                <script>
+                // create a map in the "map" div, set the view to a given place and zoom
+                var map = L.map('map').setView([41.45, -81.70], 13);
+
+                // add an OpenStreetMap tile layer
+                L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+                 attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
+
+                         </script>
+        </body>
+</html>

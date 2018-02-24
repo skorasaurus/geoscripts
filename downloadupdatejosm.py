@@ -9,9 +9,10 @@
 # downloads the newest compiled version of JOSM (called 'latest') and names it with the current . 
 # to run JOSM in your console, go to directory of JOSM, and do: java -jar nameofjosmfile
 
+
 from bs4 import BeautifulSoup
 import urllib
-import urllib2
+import urllib2 
 import re 
 
 bpage = urllib2.urlopen("http://josm.openstreetmap.de")
@@ -21,10 +22,10 @@ soupp = BeautifulSoup(bpage.read())
 
 # print(soupp.find("a", string=re.compile("development version"))) works. 
 
-tehvar = soupp.find("a", string=re.compile("development version")) 
+tehvar = soupp.find("a", string=re.compile("josm-latest.jar")) 
 
 # next_sibling will find whatever string immediately follows tehvar
-# remove the first characters and last 2 characters of it
+# remove the first 2 characters and last 2 characters of it
 
 josmversion = tehvar.next_sibling[2:-2]; 
 

@@ -15,7 +15,7 @@ import urllib
 import urllib2 
 import re 
 
-bpage = urllib2.urlopen("http://josm.openstreetmap.de")
+bpage = urllib2.urlopen("https://josm.openstreetmap.de")
 soupp = BeautifulSoup(bpage.read())
 
 # print(soupp.find(string=re.compile("development version"))) works!
